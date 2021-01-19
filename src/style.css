@@ -1,0 +1,201 @@
+*{
+  box-sizing: border-box;
+  /*margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+  max-width: 200px;*/
+
+}
+
+body {
+  /*font-size: .7em;*/
+	color: #212529;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+
+  color: #c77aee;
+  /*background-color: #f6f0c4;
+  background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);*/
+  background-repeat: no-repeat; 
+}
+
+.cabecera{
+  background:black;
+  /*color: #fafafa;*/
+  display: flex;
+}
+
+.cabecera-bloque1{
+  height: 70vh;
+  width: 50%;
+  background: url("img/pokemon-02.jpg") no-repeat 40% top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+}
+
+h1 {
+	align-self: center;
+	/*margin: 30px 0;*/
+  font-family: 'Bangers', cursive;
+  text-shadow: black 0.05em 0.05em 0.05em;
+  /*margin-left: 15%;*/
+  letter-spacing: 5px;
+  font-size: 7vh;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  margin-top: 50px;
+}
+
+.cabecera-bloque2{
+  height: 70vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+  padding-top: 0px;
+}
+
+h2{
+  align-self: center;
+	/*margin: 20px 0;*/
+	font-family: 'Montserrat', sans-serif;
+  /*margin-left: 15%;*/
+  letter-spacing: 5px;
+  font-size: 5vh;
+  line-height: 1.2;
+  /*
+  margin-bottom: 0.5rem;
+  */
+}
+
+/*INICIA POKEDEX*/
+
+.contenedor-pokemon{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  height: 100%;
+  align-items: center;
+}
+
+.pokemon-card{
+  position: relative;
+  z-index:-2;
+
+  height: 300px;
+  width: 185px;
+
+  margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2);
+
+}
+
+.pokemon-card{
+  background-image: linear-gradient(150deg, rgb(210, 242, 194) 50%, rgb(247,205,247) 50%);
+  background-position: initial;
+  background-repeat: initial;
+}
+
+.pokemon-id{
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: .7em;
+  margin-top: 5px;
+  border-radius: 20px;
+  padding: 3px 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-nombre{
+  font-family: 'Bangers', cursive;
+  font-size: 1em;
+  text-align: center;
+  letter-spacing: .5em;
+  color: black;
+}
+
+.tipo {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: .7em;
+}
+
+img{
+  width: 65%;
+  margin: auto 0;
+}
+
+.circulo{
+  padding: 65px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 70%;
+  border-radius: 50%;
+  top: 6%;
+  z-index: -1;
+}
+
+
+/*INICIA BOTON 01*/
+button {
+  width: 80px;
+  height: 40px;
+  border: 2px solid black;
+  color: black;
+  background-color: #f6f0c4;
+  font-size: .6em;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  border-radius: 6px;
+}
+
+button:hover {
+  cursor:pointer;
+  transform: scale(1.2);
+}
+
+/*FOOTER*/
+
+#footer-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.social-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  text-align: center
+}
+
+.social-bar P {
+  background: black;
+  font-family: 'Bangers', cursive;
+  letter-spacing: .2em;
+  color: white;
+  font-size: .7em;
+}
