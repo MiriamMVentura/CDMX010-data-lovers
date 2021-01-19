@@ -1,16 +1,72 @@
 // estas funciones son de ejemplo
-//funciónes de filtrado, orden y calculo
+/*
+export const example = () => {
+  /*example.filter(lugar => example.name === "kanto")
+  const datos = require ('./pokemon/pokemon.js');
+  fetch(datos)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data)=> {
+      console.log(data);
 
-//Capturando a Bulbasaur en consola
-export const example= () => { //PARA USAR ESTA FUNCIÓN EN OTRO JS DE TIPO MODULO
-  //treaer la data
-  //manipular la data por fecth y manipularla
-  //¿cómo acceder a los elementos de la lista?
-  //
- //map/filter/  acción de filtrar u ordenar
+      /* OPCION 1
+      const pokemon = {};
+      pokemon['name'] = data.name;
+      */
+
+      /* OPCION 2
+      pokemon.name.forEach(nombre => {
+      pokemon['nombre'] = pokemon['nombre'] + ', ' + nombre.name
+      });
+      console.log(pokemon);
+      
+    })
   return 'example';
 };
 
 export const anotherExample = () => {
   return 'OMG';
 };
+
+*/
+
+/*MI COMENTARIO
+let region = data.filter(lugar => lugar.name === "kanto")
+console.log(region)*/
+
+
+
+
+/*
+export const example = () => {
+  /*example.filter(lugar => example.name === "kanto")
+  const datos = require ('./pokemon/pokemon.js');
+  fetch(datos)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data)=> {
+      console.log(data);
+
+      /* OPCION 1
+      const pokemon = {};
+      pokemon['name'] = data.name;
+      */
+
+      /* OPCION 2
+      pokemon.name.forEach(nombre => {
+      pokemon['nombre'] = pokemon['nombre'] + ', ' + nombre.name
+      });
+      console.log(pokemon);
+      
+    })
+
+  return 'example';
+};
+
+export const anotherExample = () => {
+  return 'OMG';
+};
+
+*/

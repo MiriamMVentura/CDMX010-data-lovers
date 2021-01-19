@@ -1,114 +1,159 @@
 *{
-  /*box-sizing: border-box;*/
-  margin: 0;
+  box-sizing: border-box;
+  /*margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 200px;*/
+
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
+  /*font-size: .7em;*/
 	color: #212529;
-	height: 100vh;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
 
-	background-color: #f6f0c4;
-  background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
+  color: #c77aee;
+  /*background-color: #f6f0c4;
+  background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);*/
+  background-repeat: no-repeat; 
 }
 
-header {
+.cabecera{
+  background:black;
+  /*color: #fafafa;*/
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
 }
 
-h1{
-  letter-spacing: 5px;
-  font-size: 2.5rem;
+.cabecera-bloque1{
+  height: 70vh;
+  width: 50%;
+  background: url("img/pokemon-02.jpg") no-repeat 40% top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
 }
 
 h1 {
 	align-self: center;
-	margin: 30px 0;
-	font-family: 'Bangers', cursive;
+	/*margin: 30px 0;*/
+  font-family: 'Bangers', cursive;
+  text-shadow: black 0.05em 0.05em 0.05em;
+  /*margin-left: 15%;*/
+  letter-spacing: 5px;
+  font-size: 7vh;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  margin-top: 50px;
+}
+
+.cabecera-bloque2{
+  height: 70vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
   text-align: center;
-  margin-left: 15%;
+  padding-top: 0px;
+}
+
+h2{
+  align-self: center;
+	/*margin: 20px 0;*/
+	font-family: 'Montserrat', sans-serif;
+  /*margin-left: 15%;*/
+  letter-spacing: 5px;
+  font-size: 5vh;
+  line-height: 1.2;
+  /*
+  margin-bottom: 0.5rem;
+  */
 }
 
 /*INICIA POKEDEX*/
 
-.caja {
+.contenedor-pokemon{
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  margin: 0 auto;
-  /*background: pink;*/
-  border-radius: 20px;
+
+  height: 100%;
+  align-items: center;
 }
 
-.caja {
-  height: 150px;
-  width: 500px;
-}
+.pokemon-card{
+  position: relative;
+  z-index:-2;
 
-.titulo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5em;
-  text-align: center;
-  color: black;
-  /*background: pink;*/
-}
-
-/*.pokeContainer {
-  margin-top: 45px;
-}
-
-.pokeContainer {
-  width: 500px;
   height: 300px;
-  background:red;
-}*/
+  width: 185px;
 
-.pokeContainer1,
-.pokeContainer2{
-	position: relative;
-	z-index: -2;
+  margin: 20px;
 
-	height: 300px;
-	width: 185px;
-
-	margin: 20px;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-/*INICIA BOTON 01*/
-
-/*button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2);
+
+}
+
+.pokemon-card{
+  background-image: linear-gradient(150deg, rgb(210, 242, 194) 50%, rgb(247,205,247) 50%);
+  background-position: initial;
+  background-repeat: initial;
+}
+
+.pokemon-id{
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: .7em;
   margin-top: 5px;
-  margin-right: 1%;
-}*/
+  border-radius: 20px;
+  padding: 3px 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
 
-/*button {
-  margin-top: 10px;
-  margin-left: 30%;
-  margin
-}*/
+.pokemon-nombre{
+  font-family: 'Bangers', cursive;
+  font-size: 1em;
+  text-align: center;
+  letter-spacing: .5em;
+  color: black;
+}
 
+.tipo {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: .7em;
+}
+
+img{
+  width: 65%;
+  margin: auto 0;
+}
+
+.circulo{
+  padding: 65px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 70%;
+  border-radius: 50%;
+  top: 6%;
+  z-index: -1;
+}
+
+
+/*INICIA BOTON 01*/
 button {
   width: 80px;
   height: 40px;
@@ -133,6 +178,7 @@ button:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 50px;
 }
 
 .social-bar {
@@ -148,4 +194,8 @@ button:hover {
 
 .social-bar P {
   background: black;
+  font-family: 'Bangers', cursive;
+  letter-spacing: .2em;
+  color: white;
+  font-size: .7em;
 }
