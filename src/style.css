@@ -1,7 +1,5 @@
 *{
   box-sizing: border-box;
-  /*margin: 0;
-  padding: 0;*/
 }
 body {
   color: #212529;
@@ -9,45 +7,59 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  color: #C77AEE;
+  color: white;
+  /*color: #C77AEE;*/
   /*background-color: #F6F0C4;
   background-image: linear-gradient(315deg, #F6F0C4 0%, #D99EC9 74%);*/
   background-repeat: no-repeat;
 }
 .cabecera{
-  background:black;
   display: flex;
+  /*background-image: linear-gradient(315deg, #F6F0C4 0%, #D99EC9 74%);*/
+  background: black;
 }
 .cabecera-bloque1{
   height: 70vh;
-  width: 50%;
-  background: url("img/pokemon-02.jpg") no-repeat 40% top;
+  width: 60%;
+  /*background: url(“img/pokemon-02.jpg”) no-repeat 40% top;*/
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1em;
+  padding: .5em;
+  margin-left: 0%;
   text-align: center;
+}
+.cabecera-bloque1 video{
+  display: flex;
+  /*margin-right: 30%;*/
+  height: 70vh;
+  width: 100%;
 }
 h1 {
   align-self: center;
   font-family: 'Bangers', cursive;
   text-shadow: black 0.05em 0.05em 0.05em;
-  letter-spacing: 5px;
-  font-size: 7.5vh;
+  letter-spacing: 6px;
+  font-size: 9vh;
   line-height: 1.2;
-  margin-bottom: 5px;
-  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin-right: 2em;
+  /*margin-bottom: 5px;
+  margin-top: 50px;*/
 }
 .cabecera-bloque2{
   height: 70vh;
-  width: 50%;
-  background: url("img/pokemon-03.jpg") no-repeat 40% top;
+  width: 40%;
+  /*background: url(“img/pokemon-03.jpg”) no-repeat 40% top;*/
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1em;
+  padding: .5em;
   text-align: center;
   padding-top: 0px;
 }
@@ -63,13 +75,17 @@ h2{
     flex-direction: column;
     /*height: 50vh;*/
   }
+  h1{
+    margin: auto 0;
+  }
   .cabecera-bloque1{
     width: 100%;
-    height: 50vh;
+    height: 38vh;
   }
   .cabecera-bloque2{
     width: 100%;
-    height: 50vh;
+    height: 30vh;
+    margin: auto 0;
   }
   .cabecera img {
     width: 100%;
@@ -77,44 +93,33 @@ h2{
     object-position: center top;
   }
 }
-
 /*INICIA POKEDEX*/
-
 .contenedor-pokemon{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   height: 100%;
   align-items: center;
 }
-
 .pokemon-card{
   position: relative;
   z-index:-2;
-
   height: 300px;
   width: 185px;
-
   margin: 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.2);
-
 }
-
 .pokemon-card{
   background-image: linear-gradient(150deg, rgb(210, 242, 194) 50%, rgb(247,205,247) 50%);
   background-position: initial;
   background-repeat: initial;
 }
-
 .pokemon-id{
   font-family: 'Montserrat', sans-serif;
   color: black;
@@ -124,7 +129,6 @@ h2{
   padding: 3px 10px;
   background: rgba(0, 0, 0, 0.2);
 }
-
 .pokemon-nombre{
   font-family: 'Bangers', cursive;
   font-size: 1em;
@@ -132,18 +136,15 @@ h2{
   letter-spacing: .5em;
   color: black;
 }
-
 .tipo {
   font-family: 'Montserrat', sans-serif;
   color: black;
   font-size: .7em;
 }
-
 img{
   width: 65%;
   margin: auto 0;
 }
-
 .circulo{
   padding: 65px;
   position: absolute;
@@ -153,36 +154,50 @@ img{
   top: 6%;
   z-index: -1;
 }
-
-
 /*INICIA BOTON 01*/
+.botones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 5em;
+  align-items: center;
+  /*padding: 1em 40em;*/
+}
 button {
-  width: 80px;
-  height: 40px;
-  border: 2px solid black;
+  border: 3px solid black;
   color: black;
-  background-color: #f6f0c4;
+  background-color: white;
+  /*border-radius: 50%;*/
   font-size: .6em;
   letter-spacing: 2px;
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   text-align: center;
-  border-radius: 6px;
+  width: 70px;
+  height: 30px;
+  /*width: 50px;
+     height: 50px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;*/
 }
-
 button:hover {
   cursor:pointer;
   transform: scale(1.2);
 }
-
+button:hover {
+  color: /*#C77AEE*/ white;
+  background-color: black;
+}
 /*FOOTER*/
-
 #footer-container{
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: 50px;
 }
-
 .social-bar {
   position: fixed;
   left: 0;
@@ -193,7 +208,6 @@ button:hover {
   color: white;
   text-align: center
 }
-
 .social-bar P {
   background: black;
   font-family: 'Bangers', cursive;

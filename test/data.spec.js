@@ -1,5 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
-
+/*import { example, anotherExample } from '../src/data.js';
 
 describe('example', () => {
   it('is a function', () => {
@@ -21,3 +20,19 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });
+*/
+
+
+import { filterByRegion } from '../src/data.js';
+
+describe('filterByRegion', () => {
+  it('is a function', () => {
+    expect(typeof filterByRegion).toBe('function');
+  });
+
+  it('returns `an array of objects`', () => {
+    expect(typeof filterByRegion([])).toBe('object');
+  });
+
+});
+
