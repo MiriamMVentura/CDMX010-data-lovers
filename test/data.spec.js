@@ -22,7 +22,6 @@ describe('anotherExample', () => {
 });
 */
 
-
 import { filterByRegion } from '../src/data.js';
 
 describe('filterByRegion', () => {
@@ -33,6 +32,19 @@ describe('filterByRegion', () => {
   it('returns `an array of objects`', () => {
     expect(typeof filterByRegion([])).toBe('object');
   });
-
 });
 
+
+// describe('filtrarTipoPlanta', () => {
+//   it('is a function', () => {
+//     expect(typeof filtrarTipoPlanta).toBe('function');
+//   });
+
+//   it('returns `un pokemon de tipo planta`', () => {
+//     expect(typeof filtrarTipoPlanta()).toBe('paras');
+//   });
+// });
+
+// it('should return "HIJKLMNOPQRSTUVWXYZABCDEFG" for "ABCDEFGHIJKLMNOPQRSTUVWXYZ" with offset 33', () => {
+//   expect(cipher.encode(33, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('HIJKLMNOPQRSTUVWXYZABCDEFG');
+// });

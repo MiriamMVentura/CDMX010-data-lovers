@@ -1,10 +1,9 @@
 //import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
-
-import { filterByRegion } from './data.js';
+import { filterByRegion , filterByType} from './data.js';
 
 // ESTA FUNCION CREA LAS TARJETAS DE CADA POKEMON DESDE JS ${pokemon.img}
-export function createCard(pokemon) {
+function createCard(pokemon) {
   let card = `
     <div class="pokemon-card">
       <img src="${pokemon.img}" alt="">
@@ -17,34 +16,39 @@ export function createCard(pokemon) {
   return card;
 }
 
-// ESTA FUNCION COLOCA INFORMACION DE CADA POKEMON DESDE JS
-function setCards(pokemones) { //recibe un argumento
+// ESTA FUNCION COLOCA INFORMACION DE CADA POKEMON
+function setCards(pokemones) {
   let containerCards = document.getElementById('contenedor-pokemon');
   let emptyCard = '';
   pokemones.forEach(poke => emptyCard += createCard(poke));
-
   containerCards.innerHTML = emptyCard;
 }
 
-setCards(data.pokemon);// parametro
+setCards(data.pokemon);  // parametro
 
+//Botones de filtrado por Región "Kanto y Johto"
+let pokemonRegion = document.querySelectorAll('.region'); //variable para llamar a todos los elementos con esa clase (los botones)
+for(let i=0; i< pokemonRegion.length; i++){ //para iterar sobre los valores de esos elementos y saber que son 2 botones distintos
+  pokemonRegion[i].addEventListener('click',()=>{ // desde el index va a aplicar la función click
+    let filterRegion= filterByRegion(pokemonRegion[i].id); //llama la funcion de manipulación de array importada y la aplique desde el index tomando el id como punto para match
+    console.log
+    setCards(filterRegion);
+  });
+}
+
+//botones filtrado por tipos de Pokémon
+let pokemonType= document.querySelectorAll('.types'); //variable para llamar a todos los elementos con esa clase (los botones)
+for(let i=0; i< pokemonType.length; i++){ //para iterar sobre los valores de esos elementos y saber que son 2 botones distintos
+  pokemonType[i].addEventListener('click',()=>{ // desde el index va a aplicar la función click
+    let filterType= filterByType(pokemonType[i].id); //llama la funcion de manipulación de array importada y la aplique desde el index tomando el id como punto para match
+    setCards(filterType);
+  });
+}
+
+
+// export let pokemonKanto = 2 + 2;
+// console.log(pokemonKanto);
+// export let uno = ${pokemon.name};
 // tarea: domContentLoaded
 // tarea: window.addEventListener
 
-//tarea refactorizar esta sección para hacer un solo modulo de codigo
-let btnKanto = document.querySelector('.regionKanto'); //selecciono el boton kanto
-btnKanto.addEventListener ('click',function () {
-  const pokemonsKanto = filterByRegion('kanto'); //funcion para el filtrado de kanto
-  setCards(pokemonsKanto);//pintar esa funcion en la pantalla con sus tarjetas
-})
-
-
-let btnJohto = document.querySelector('.regionJohto');
-btnJohto.addEventListener ('click',function () {
-  const pokemonsJohto = filterByRegion('johto'); //funcion para el filtrado de johto
-  setCards(pokemonsJohto);
-})
-
-
-// tarea: domContentLoaded
-// tarea: window.addEventListener
