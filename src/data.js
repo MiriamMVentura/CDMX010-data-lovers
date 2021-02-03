@@ -4,15 +4,19 @@ export const filterByRegion = (region) => {
   const pokemons = data.pokemon.filter(item =>{
     return item.generation.name === region;
   });
+  // console.log(filterByRegion)
   return pokemons;
 };
 
 export const filterByType = (type) => {
   const filterType = data.pokemon.filter(poke=>{
     return poke.type.includes(type)});
-    console.log(filterType);
+    // console.log(filterType);
   return filterType;
 };
+
+
+
 
 // export function filtrarTipoFuego () {
 //   const typeFire = data.pokemon.filter(fuego => fuego.type.includes('fire'));
