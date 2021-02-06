@@ -1,4 +1,4 @@
-import { filterByRegion, filterByType } from '../src/data.js';
+import { filterByRegion, filterByType, a, b, } from '../src/data.js';
 
 describe('filterByRegion', () => {
   it('is a function', () => {
@@ -29,5 +29,18 @@ describe('filterByType', () => {
   it('returns an array of  pokemons when the provided filter is dark', () => {
     const dark = filterByType('dark')
     expect(dark.length).toBe(6);
+  });
+});
+
+
+describe('a', () => {
+  it('is a function', () => {
+    expect(typeof a).toBe('function');
+  });
+});
+
+describe('b', () => {
+  it('is a function', () => {
+    expect(typeof b).toBe('function');
   });
 });
